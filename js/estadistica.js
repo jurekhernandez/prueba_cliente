@@ -11,7 +11,6 @@ function estadistica(){
         dataType: "json",
         success: function(data){
             for(var i =0 ; i< data.length; i++){
-                console.log(data[i].id_producto );
                 var elementos = "";
                 elementos+="<tr class'producto'>";
                 elementos+="<th scope='row'>"+data[i].id_producto+"</th>"; 
