@@ -10,7 +10,8 @@ function estadistica(){
      //   url:"http://35.202.228.28/prueba_wb/public/estadistica",
         dataType: "json",
         success: function(data){
-            for(var i =1 ; i<= data.length; i++){
+            for(var i =0 ; i< data.length; i++){
+                console.log(data[i].id_producto );
                 var elementos = "";
                 elementos+="<tr class'producto'>";
                 elementos+="<th scope='row'>"+data[i].id_producto+"</th>"; 
