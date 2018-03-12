@@ -9,14 +9,15 @@ $(document).ready(function(){
     $("#search").click(function(){
         buscar($("#keyword").val());
     })
-})
+});
 
 function buscar(keyword){ 
     var obj = { "keyword":keyword};
     $(".producto").remove();
     $.ajax({
         type: "post",
-        url: "http://localhost/prueba/public/search",
+        url: "http://localhost/prueba_wb/public/search",
+      //  url:"http://35.202.228.28/prueba_wb/public/search",
         data: JSON.stringify(obj),
         contentType: "application/json; charset=utf-8",
         dataType: "json",
