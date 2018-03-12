@@ -1,9 +1,5 @@
 $(document).ready(function(){
     estadistica();
-    setTimeout(
-        function(){
-            estadistica();
-        }, 5000);
 })
 
 function estadistica(){
