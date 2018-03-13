@@ -1,12 +1,16 @@
 $(document).ready(function(){
     estadistica();
+
+    $("#cargar").click(function(){
+        cargarCSV();
+    })
+
 })
 
 function estadistica(){
     $(".producto").remove();
     $.ajax({
         type: "post",
-      //  url: "http://localhost/prueba_wb/public/estadistica",
           url:"http://35.202.228.28/prueba_wb/public/estadistica",
           cache: false,
         dataType: "json",
@@ -26,3 +30,22 @@ function estadistica(){
         console.log(error);
     });
 }
+
+/*
+    function cargarCSV(){
+        var formData = new FormData(document.getElementById("formuploadajax"));
+        formData.append("dato", "valor");
+        $.ajax({
+            url: "http://localhost/prueba_wb/public/cargar",
+            type: "post",
+            dataType: "html",
+            data: formData,
+            cache: false,
+            contentType: false,
+            processData: false
+        })
+        .done(function(res){
+            $("#mensaje").html("Respuesta: " + res);
+        });
+    }
+    */
